@@ -1,6 +1,6 @@
 export const useOTPLogin = () => {
     const requestOTP = async (email) => {
-        const response = await fetch('http://localhost:3000/api/user/login/otp-request', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/user/login/otp-request`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email }),
@@ -13,7 +13,7 @@ export const useOTPLogin = () => {
     };
 
     const verifyOTP = async (email, otp) => {
-        const response = await fetch('http://localhost:3000/api/user/login/otp-verify', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/user/login/otp-verify`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, otp }),

@@ -73,7 +73,7 @@ const SignupPage = () => {
         setServerSuccess("");
 
         try {
-            const response = await fetch('http://localhost:3000/api/user/signup', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/user/signup`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username: data.username, email: data.email, password: data.password }),
@@ -102,7 +102,7 @@ const SignupPage = () => {
         setServerSuccess("");
 
         try {
-            const response = await fetch('http://localhost:3000/api/user/signup', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/user/signup`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
