@@ -141,7 +141,7 @@ const LoginPage = () => {
                         )}
                     </CardContent>
                     <CardFooter className="flex flex-col items-center space-y-2">
-                        <p className="text-sm text-gray-500">Don't have an account? <Link href={`/signup`} className="text-blue-500">Sign up</Link></p>
+                        <p className="text-sm text-gray-500">Dont have an account? <Link href={`/signup`} className="text-blue-500">Sign up</Link></p>
                     </CardFooter>
                 </Card>
             </motion.div>
